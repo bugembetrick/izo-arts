@@ -127,7 +127,7 @@ if (contactForm) {
         // Check if form is valid
         if (contactForm.checkValidity()) {
             // Form is valid - show success message
-            formSuccess.style.display = 'block';
+            formSuccess.classList.add('show');
             
             // Reset the form
             contactForm.reset();
@@ -135,7 +135,7 @@ if (contactForm) {
             
             // Hide success message after 5 seconds
             setTimeout(() => {
-                formSuccess.style.display = 'none';
+                formSuccess.classList.remove('show');
             }, 5000);
             
             // Scroll to success message
@@ -146,18 +146,8 @@ if (contactForm) {
         }
     });
     
-    // Custom validation for email field
-    const emailInput = contactForm.querySelector('#email');
-    if (emailInput) {
-        emailInput.addEventListener('input', () => {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(emailInput.value)) {
-                emailInput.setCustomValidity('Please enter a valid email address.');
-            } else {
-                emailInput.setCustomValidity('');
-            }
-        });
-    }
+    // HTML5 native email validation is used
+    // No need for custom validation as browser handles it better
 }
 
 // ==========================================
@@ -200,13 +190,7 @@ if (offcanvasElement) {
 // ==========================================
 // Lazy Loading Images (Progressive Enhancement)
 // ==========================================
-if ('loading' in HTMLImageElement.prototype) {
-    // Browser supports native lazy loading
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-        img.src = img.src;
-    });
-} else {
+if (!('loading' in HTMLImageElement.prototype)) {
     // Fallback for browsers that don't support lazy loading
     const script = document.createElement('script');
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';

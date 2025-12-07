@@ -547,6 +547,15 @@ img {
     margin-bottom: 0.5rem;
 }
 
+/* Success message styling */
+#formSuccess {
+    display: none;
+}
+
+#formSuccess.show {
+    display: block;
+}
+
 /* ==========================================
    Footer
    ========================================== */
@@ -696,6 +705,11 @@ img {
         display: block;
         width: 100%;
         margin: 0.5rem 0 !important;
+    }
+    
+    /* Disable fixed background on mobile for performance */
+    .hero-section {
+        background-attachment: scroll;
     }
 }
 
