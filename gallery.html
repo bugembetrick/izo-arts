@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery of Contemporary Ugandan Art by Izo Arts Uganda">
+    <title>Gallery - Izo Arts Uganda</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Izo Arts Uganda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="navbarOffcanvasLabel">Izo Arts Uganda</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Gallery</h1>
+            <p class="page-subtitle">Explore the collection of contemporary Ugandan art</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-buttons text-center mb-5">
+                <button class="btn btn-filter active" data-filter="all">All</button>
+                <button class="btn btn-filter" data-filter="portraits">Portraits</button>
+                <button class="btn btn-filter" data-filter="abstract">Abstract</button>
+                <button class="btn btn-filter" data-filter="cultural">Cultural Scenes</button>
+                <button class="btn btn-filter" data-filter="landscapes">Landscapes</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4" id="galleryGrid">
+                <!-- Artwork 1 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="cultural">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Kampala Sunrise" 
+                         data-year="2024" 
+                         data-medium="Acrylic on Canvas" 
+                         data-dimensions="90 x 120 cm"
+                         data-description="A vibrant depiction of Kampala awakening to a new day, with warm hues capturing the energy of the city."
+                         data-image="https://picsum.photos/800/1000?random=11">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=11" alt="Kampala Sunrise" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Kampala Sunrise</h3>
+                            <p class="artwork-medium">Acrylic on Canvas | 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 2 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="cultural">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="The Drummers" 
+                         data-year="2023" 
+                         data-medium="Mixed Media" 
+                         data-dimensions="80 x 100 cm"
+                         data-description="Celebrating the rhythmic heartbeat of Uganda through traditional drum performances."
+                         data-image="https://picsum.photos/800/1000?random=12">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=12" alt="The Drummers" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">The Drummers</h3>
+                            <p class="artwork-medium">Mixed Media | 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 3 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="cultural">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Market Colors" 
+                         data-year="2024" 
+                         data-medium="Oil on Canvas" 
+                         data-dimensions="100 x 120 cm"
+                         data-description="The bustling energy of a Ugandan market, filled with vibrant textiles and fresh produce."
+                         data-image="https://picsum.photos/800/1000?random=13">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=13" alt="Market Colors" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Market Colors</h3>
+                            <p class="artwork-medium">Oil on Canvas | 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 4 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="landscapes">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Sunset Over the Nile" 
+                         data-year="2023" 
+                         data-medium="Acrylic on Canvas" 
+                         data-dimensions="90 x 120 cm"
+                         data-description="A serene sunset over the Nile River, capturing the golden light and tranquil waters."
+                         data-image="https://picsum.photos/800/1000?random=14">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=14" alt="Sunset Over the Nile" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Sunset Over the Nile</h3>
+                            <p class="artwork-medium">Acrylic on Canvas | 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 5 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="abstract">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Dancing Spirits" 
+                         data-year="2024" 
+                         data-medium="Mixed Media" 
+                         data-dimensions="80 x 100 cm"
+                         data-description="An abstract exploration of movement, rhythm, and ancestral energy through bold colors and dynamic forms."
+                         data-image="https://picsum.photos/800/1000?random=15">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=15" alt="Dancing Spirits" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Dancing Spirits</h3>
+                            <p class="artwork-medium">Mixed Media | 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 6 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="cultural">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Village Life" 
+                         data-year="2023" 
+                         data-medium="Oil on Canvas" 
+                         data-dimensions="90 x 120 cm"
+                         data-description="A glimpse into the daily life of a Ugandan village, celebrating community and tradition."
+                         data-image="https://picsum.photos/800/1000?random=16">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=16" alt="Village Life" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Village Life</h3>
+                            <p class="artwork-medium">Oil on Canvas | 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 7 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="portraits">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Urban Rhythm" 
+                         data-year="2024" 
+                         data-medium="Acrylic on Canvas" 
+                         data-dimensions="70 x 90 cm"
+                         data-description="Portrait of a young urban Ugandan, embodying the modern spirit and energy of the city."
+                         data-image="https://picsum.photos/800/1000?random=17">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=17" alt="Urban Rhythm" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Urban Rhythm</h3>
+                            <p class="artwork-medium">Acrylic on Canvas | 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 8 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="landscapes">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Golden Hour" 
+                         data-year="2023" 
+                         data-medium="Watercolor" 
+                         data-dimensions="60 x 80 cm"
+                         data-description="The magical golden hour in the Ugandan countryside, with soft light painting the landscape."
+                         data-image="https://picsum.photos/800/1000?random=18">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=18" alt="Golden Hour" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Golden Hour</h3>
+                            <p class="artwork-medium">Watercolor | 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 9 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="portraits">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="The Storyteller" 
+                         data-year="2024" 
+                         data-medium="Oil on Canvas" 
+                         data-dimensions="80 x 100 cm"
+                         data-description="An elder sharing wisdom and stories, preserving the oral traditions of Uganda."
+                         data-image="https://picsum.photos/800/1000?random=19">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=19" alt="The Storyteller" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">The Storyteller</h3>
+                            <p class="artwork-medium">Oil on Canvas | 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 10 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="abstract">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Ancestral Echoes" 
+                         data-year="2023" 
+                         data-medium="Mixed Media" 
+                         data-dimensions="100 x 120 cm"
+                         data-description="An abstract tribute to ancestral spirits and cultural heritage through layered textures and symbols."
+                         data-image="https://picsum.photos/800/1000?random=20">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=20" alt="Ancestral Echoes" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Ancestral Echoes</h3>
+                            <p class="artwork-medium">Mixed Media | 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 11 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="landscapes">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Morning Light" 
+                         data-year="2024" 
+                         data-medium="Acrylic on Canvas" 
+                         data-dimensions="90 x 120 cm"
+                         data-description="The first light of dawn illuminating the rolling hills and lush greenery of Uganda."
+                         data-image="https://picsum.photos/800/1000?random=21">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=21" alt="Morning Light" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Morning Light</h3>
+                            <p class="artwork-medium">Acrylic on Canvas | 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 12 -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="portraits">
+                    <div class="artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" 
+                         data-title="Cultural Pride" 
+                         data-year="2023" 
+                         data-medium="Oil on Canvas" 
+                         data-dimensions="70 x 90 cm"
+                         data-description="A portrait celebrating Ugandan identity, adorned with traditional patterns and vibrant colors."
+                         data-image="https://picsum.photos/800/1000?random=22">
+                        <div class="artwork-image">
+                            <img src="https://picsum.photos/600/800?random=22" alt="Cultural Pride" loading="lazy">
+                        </div>
+                        <div class="artwork-info">
+                            <h3 class="artwork-title">Cultural Pride</h3>
+                            <p class="artwork-medium">Oil on Canvas | 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artwork Modal -->
+    <div class="modal fade" id="artworkModal" tabindex="-1" aria-labelledby="artworkModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="artworkModalLabel">Artwork Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modalImage" src="" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalTitle" class="mb-3"></h3>
+                            <div class="artwork-details mb-3">
+                                <p><strong>Year:</strong> <span id="modalYear"></span></p>
+                                <p><strong>Medium:</strong> <span id="modalMedium"></span></p>
+                                <p><strong>Dimensions:</strong> <span id="modalDimensions"></span></p>
+                            </div>
+                            <p id="modalDescription" class="artwork-description"></p>
+                            <a href="contact.html" class="btn btn-primary mt-3">Inquire About This Piece</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-brand">Izo Arts Uganda</h5>
+                    <p class="footer-text">Contemporary Ugandan Art</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Contact</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope"></i> info@izoarts.com</li>
+                        <li><i class="bi bi-whatsapp"></i> +256 700 123 456</li>
+                        <li><i class="bi bi-geo-alt"></i> Kampala, Uganda</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider mt-4 mb-4">
+            <div class="text-center">
+                <p class="footer-copyright mb-0">&copy; 2025 Izo Arts Uganda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
