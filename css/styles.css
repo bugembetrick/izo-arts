@@ -14,8 +14,8 @@
     --color-white: #ffffff;
     
     /* Typography */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Lora', serif;
     
     /* Transitions */
     --transition-smooth: all 0.3s ease;

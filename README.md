@@ -22,7 +22,7 @@ Izo Arts Uganda is a modern, clean online art gallery designed to showcase the v
 - **CSS3** - Custom styles with CSS Grid and Flexbox
 - **Bootstrap 5** - Responsive grid system and components
 - **Vanilla JavaScript** - Interactive features without dependencies
-- **Google Fonts** - Playfair Display (headings) + Inter (body text)
+- **Google Fonts** - Cormorant Garamond (headings) + Lora (body text)
 - **Bootstrap Icons** - Scalable vector icons
 
 ## 📁 File Structure
@@ -52,8 +52,8 @@ izo-arts/
 - **Text**: Dark gray (#1a1a1a)
 
 ### Typography
-- **Headings**: Playfair Display (serif)
-- **Body**: Inter (sans-serif)
+- **Headings**: Cormorant Garamond (serif)
+- **Body**: Lora (serif)
 
 ## 🚀 Getting Started
 
